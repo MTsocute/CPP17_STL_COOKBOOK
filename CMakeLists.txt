@@ -27,23 +27,39 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 #        Chapter1/使用折叠表达式实现辅助函数.cpp)
 
 # Chapter 2
-add_executable(STL_Vector
-        Chapter2/vectorSTL操作.cpp
-        Chapter2/vectorSTL操作.h)
-add_executable(STL_Map
-        Chapter2/mapSTL操作.cpp
-        Chapter2/mapSTLOP.cpp)
-target_link_directories(STL_Map PUBLIC
-        Chapter2/mapSTL操作.h)
-add_executable(STL_set
-        Chapter2/setSTL操作.cpp
-        Chapter2/setSTL操作.h)
-add_executable(RPN
-        Chapter2/逆波兰计算器.cpp
-        Chapter2/逆波兰计算器.h)
-add_executable(Map_in_use
-        Chapter2/词频计数器.cpp
-        Chapter2/词频计数器.h)
-add_executable(STL_priority_queue
-        Chapter2/priority_queue.cpp
-        Chapter2/priority_queue.h)
+#add_executable(STL_Vector
+#        Chapter2/vectorSTL操作.cpp
+#        Chapter2/vectorSTL操作.h)
+#add_executable(STL_Map
+#        Chapter2/mapSTL操作.cpp
+#        Chapter2/mapSTLOP.cpp)
+#target_link_directories(STL_Map PUBLIC
+#        Chapter2/mapSTL操作.h)
+#add_executable(STL_set
+#        Chapter2/setSTL操作.cpp
+#        Chapter2/setSTL操作.h)
+#add_executable(RPN
+#        Chapter2/逆波兰计算器.cpp
+#        Chapter2/逆波兰计算器.h)
+#add_executable(Map_in_use
+#        Chapter2/词频计数器.cpp
+#        Chapter2/词频计数器.h)
+#add_executable(STL_priority_queue
+#        Chapter2/priority_queue.cpp
+#        Chapter2/priority_queue.h)
+
+# Chapter 3
+add_executable(own_iterator
+        Chapter3/实现一个简单的迭代器.cpp
+        Chapter3/实现一个简单的迭代器.h)
+add_executable(iterator_wrapper
+        Chapter3/迭代适配器.cpp)
+add_executable(iterator_algorithm
+        Chapter3/迭代器算法.cpp
+        Chapter3/迭代器算法.h)
+add_executable(reverse_iterator
+        Chapter3/反向迭代器.cpp
+        Chapter3/反向迭代器.h)
+add_executable(it_sentinel
+        Chapter3/哨兵模式.cpp
+        Chapter3/哨兵模式.h)

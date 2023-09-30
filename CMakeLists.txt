@@ -49,17 +49,42 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 #        Chapter2/priority_queue.h)
 
 # Chapter 3
-add_executable(own_iterator
-        Chapter3/实现一个简单的迭代器.cpp
-        Chapter3/实现一个简单的迭代器.h)
-add_executable(iterator_wrapper
-        Chapter3/迭代适配器.cpp)
-add_executable(iterator_algorithm
-        Chapter3/迭代器算法.cpp
-        Chapter3/迭代器算法.h)
-add_executable(reverse_iterator
-        Chapter3/反向迭代器.cpp
-        Chapter3/反向迭代器.h)
-add_executable(it_sentinel
-        Chapter3/哨兵模式.cpp
-        Chapter3/哨兵模式.h)
+#add_executable(own_iterator
+#        Chapter3/实现一个简单的迭代器.cpp
+#        Chapter3/实现一个简单的迭代器.h)
+#add_executable(iterator_wrapper
+#        Chapter3/迭代适配器.cpp)
+#add_executable(iterator_algorithm
+#        Chapter3/迭代器算法.cpp
+#        Chapter3/迭代器算法.h)
+#add_executable(reverse_iterator
+#        Chapter3/反向迭代器.cpp
+#        Chapter3/反向迭代器.h)
+#add_executable(it_sentinel
+#        Chapter3/哨兵模式.cpp
+#        Chapter3/哨兵模式.h)
+
+# Chapter 4
+#add_executable(lambda_func
+#        Chapter4/lambda函数.cpp)
+#add_executable(function_wrapper
+#        Chapter4/补充知识/function_func_wrapper.cpp
+#        Chapter4/补充知识/function_func_wrapper.h)
+#add_executable(lambda_func_with_func_wrapper
+#        Chapter4/使用lambda为function添加多态性.cpp
+#        Chapter4/使用lambda为function添加多态性.h)
+## 把需要使用的函数嵌套在一起，成为一个新的函数（不限制数量）
+#add_executable(concatenation_func
+#        Chapter4/并置函数.cpp)
+#add_executable(combine
+#        Chapter4/通过逻辑连接创建复杂谓词.cpp
+#        Chapter4/通过逻辑连接创建复杂谓词.h)
+#add_executable(multicaller
+#        Chapter4/同一输入调用多个函数.cpp)
+
+# Chapter 5
+add_executable(STL_Copy
+        Chapter5/容器间的互相拷贝.cpp
+        Chapter5/容器间的互相拷贝.h)
+add_executable(STL_Sort Chapter5/容器元素的排序.cpp)
+add_executable(STL_Remove Chapter5/从容器中删除指定元素.cpp)

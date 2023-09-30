@@ -18,7 +18,7 @@
 using namespace std;
 using my_double_func_p = double (*)(double, double);
 
-// 使用函数指针引用 lambda 表达式
+// 字典和 lambda 表达式的巧妙结合
 map<string, my_double_func_p> ops = {
         {"+", [](double a, double b) { return a + b; }},
         {"-", [](double a, double b) { return a - b; }},

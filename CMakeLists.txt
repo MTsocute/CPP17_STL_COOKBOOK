@@ -88,3 +88,22 @@ add_executable(STL_Copy
         Chapter5/容器间的互相拷贝.h)
 add_executable(STL_Sort Chapter5/容器元素的排序.cpp)
 add_executable(STL_Remove Chapter5/从容器中删除指定元素.cpp)
+add_executable(STL_Transform
+        Chapter5/改变容器内容.cpp)
+## 补充知识
+add_executable(stringStream
+        Chapter5/补充知识/stringstream的使用.cpp)
+## --------
+
+add_executable(STL_Search
+        Chapter5/在有序和无序的vector中查找元素.cpp
+        Chapter5/在有序和无序的vector中查找元素.h)
+add_executable(STL_Locate_Range
+        Chapter5/在vector中的值控制在特定范围内.cpp
+        Chapter5/在vector中的值控制在特定范围内.h)
+add_executable(STL_string_Search
+        Chapter5/字符串中的定位方法.cpp)
+add_executable(STL_Sampling
+        Chapter5/对大vector采样.cpp)
+add_executable(STL_Merge
+        Chapter5/合并容器.cpp)

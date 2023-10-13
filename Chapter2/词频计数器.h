@@ -43,7 +43,7 @@ void sth_about_string_func() {
 
     cout << "The first character but not vowel is at: " << pos << endl
          << "The first character but not vowel is at: " << pos2;
-    // string.substr(begin, end): 获取 [start, end) 之间的子字符串
+    // string.substr(begin, length): 获取 [start, start + length] 之间的子字符串
     cout << "New substr is: " << demo1.substr(pos, pos2 - pos + 1) << endl;
 }
 

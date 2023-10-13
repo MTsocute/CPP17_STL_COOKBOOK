@@ -1,8 +1,11 @@
 cmake_minimum_required(VERSION 3.25)
 PROJECT(STL CXX)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+include_directories("/opt/homebrew/Cellar/fmt/10.1.1/include")
+link_directories("/opt/homebrew/Cellar/fmt/10.1.1/lib")
 
 # Chapter 1
 #add_executable(new_feature_1
@@ -109,6 +112,29 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 #        Chapter5/合并容器.cpp)
 
 # Chapter 6
-add_executable(STL_Research_Tree
-        Chapter6/使用STL算法实现简单单词查找树.cpp
-        Chapter6/使用STL算法实现简单单词查找树.h)
+#add_executable(STL_Research_Tree
+#        Chapter6/使用STL算法实现简单单词查找树.cpp
+#        Chapter6/使用STL算法实现简单单词查找树.h)
+
+# Chapter 7
+#add_executable(string_view_recognize
+#        Chapter7/创建and连接and转换字符串.cpp)
+#add_executable(eliminate_space
+#        Chapter7/消除字符串开头和结尾的空格.cpp)
+#add_executable(string_view_feature
+#        Chapter7/无需构造string.cpp)
+#add_executable(get_user_s_data
+#        Chapter7/从用户输入读取数值.cpp)
+#add_executable(count_all_word
+#        Chapter7/计算文件中的单词数量.cpp)
+#add_executable(file_initiates_complex_obj
+#        Chapter7/文件初始化复杂对象.cpp)
+#add_executable(filling_container
+#        Chapter7/迭代器装填容器.cpp)
+#add_executable(ostream_printing
+#        Chapter7/迭代器打印.cpp)
+#add_executable(log_to_file
+#        Chapter7/输出数据到文件.cpp)
+#add_executable(readable_error_msg
+#        Chapter7/从错误中获取可读异常.cpp)
+#target_link_libraries(readable_error_msg PRIVATE fmt)

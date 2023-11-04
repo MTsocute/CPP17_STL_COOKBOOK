@@ -1,11 +1,12 @@
 cmake_minimum_required(VERSION 3.25)
 PROJECT(STL CXX)
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-include_directories("/opt/homebrew/Cellar/fmt/10.1.1/include")
-link_directories("/opt/homebrew/Cellar/fmt/10.1.1/lib")
+# Third Part Library
+find_package(range-v3 REQUIRED)
+find_package(fmt REQUIRED)
 
 # Chapter 1
 #add_executable(new_feature_1
@@ -78,7 +79,8 @@ link_directories("/opt/homebrew/Cellar/fmt/10.1.1/lib")
 #        Chapter4/使用lambda为function添加多态性.h)
 ## 把需要使用的函数嵌套在一起，成为一个新的函数（不限制数量）
 #add_executable(concatenation_func
-#        Chapter4/并置函数.cpp)
+#        Chapter4/并置函数.cpp
+#        Chapter8/module_test/zip_func.cpp)
 #add_executable(combine
 #        Chapter4/通过逻辑连接创建复杂谓词.cpp
 #        Chapter4/通过逻辑连接创建复杂谓词.h)
@@ -138,3 +140,53 @@ link_directories("/opt/homebrew/Cellar/fmt/10.1.1/lib")
 #add_executable(readable_error_msg
 #        Chapter7/从错误中获取可读异常.cpp)
 #target_link_libraries(readable_error_msg PRIVATE fmt)
+
+# Chapter8
+#add_executable(STL_TIME_ABOUT
+#        Chapter8/转换不同的时间单位.cpp)
+#target_link_libraries(STL_TIME_ABOUT PUBLIC fmt)
+#add_executable(STL_TIME_ABOUT2
+#        Chapter8/转换绝对时间和相对时间.cpp)
+#target_link_libraries(STL_TIME_ABOUT2 PUBLIC fmt)
+#add_executable(optional
+#        Chapter8/安全的失败标识--optional.cpp
+#        Chapter8/optional_head.h)
+#target_link_libraries(optional PRIVATE fmt)
+#add_executable(func_to_tuple
+#        Chapter8/对元组使用函数.cpp
+#        Chapter8/对元组使用函数.h)
+#target_link_libraries(func_to_tuple PRIVATE fmt)
+#add_executable(tuple_DS
+#        Chapter8/元组快速构成数据结构.cpp
+#        Chapter8/元组快速构成数据结构.h)
+#target_link_libraries(tuple_DS fmt::fmt)
+#target_link_libraries(tuple_DS range-v3::range-v3)
+#add_executable(any_substitute_void
+#        Chapter8/any的替换void*.cpp)
+#target_link_libraries(any_substitute_void fmt::fmt)
+#add_executable(variant
+#        Chapter8/存储不同类型.cpp
+#        Chapter8/存储不同类型.h)
+#target_link_libraries(variant fmt::fmt)
+#add_executable(unique_pointer_in_use
+#        Chapter8/自动规划资源管理.cpp
+#        Chapter8/自动化规划资源管理.h)
+#add_executable(shared_pointer
+#        Chapter8/处理共享堆内存.cpp
+#        Chapter8/处理共享堆内存.h)
+#add_executable(weak_pointer
+#        Chapter8/对共享对象使用弱指针.cpp
+#        Chapter8/对共享对象使用弱指针.h)
+#target_link_libraries(weak_pointer fmt::fmt)
+#add_executable(smartP_with_API
+#        Chapter8/智能指针简化处理遗留API问题.cpp
+#        Chapter8/智能指针简化处理遗留API问题.h)
+#add_executable(shared_P_different_member
+#        Chapter8/共享同一对象的不同成员.cpp
+#        Chapter8/共享同一对象的不同成员.h)
+add_executable(random_num_generator
+        Chapter8/选择合适的引擎生成随机数.cpp
+        Chapter8/random_number_generator.h)
+target_link_libraries(random_num_generator fmt::fmt)
+add_executable(precise_probability
+        Chapter8/让STL以指定的分布方式产生随机数.cpp)

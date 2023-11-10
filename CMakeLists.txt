@@ -184,9 +184,19 @@ find_package(fmt REQUIRED)
 #add_executable(shared_P_different_member
 #        Chapter8/共享同一对象的不同成员.cpp
 #        Chapter8/共享同一对象的不同成员.h)
-add_executable(random_num_generator
-        Chapter8/选择合适的引擎生成随机数.cpp
-        Chapter8/random_number_generator.h)
-target_link_libraries(random_num_generator fmt::fmt)
-add_executable(precise_probability
-        Chapter8/让STL以指定的分布方式产生随机数.cpp)
+#add_executable(random_num_generator
+#        Chapter8/选择合适的引擎生成随机数.cpp
+#        Chapter8/random_number_generator.h)
+#target_link_libraries(random_num_generator fmt::fmt)
+#add_executable(precise_probability
+#        Chapter8/让STL以指定的分布方式产生随机数.cpp)
+
+# Chapter 10
+#add_executable(file_path
+#        Chapter10/实现标准化路径.cpp)
+#add_executable(normative_path
+#        Chapter10/相对路径获取规范的文件路径.cpp)
+#target_link_libraries(normative_path fmt::fmt)
+add_executable(all_files_of_dir
+        Chapter10/列出目录下所有的文件.cpp
+        Chapter10/files.h)

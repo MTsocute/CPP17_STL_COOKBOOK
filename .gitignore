@@ -205,3 +205,10 @@ cmake-build-debug/tuple_DS
 cmake-build-debug/unique_pointer_in_use
 cmake-build-debug/variant
 cmake-build-debug/weak_pointer
+cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-17e5fa2405dc95657bf6.json
+cmake-build-debug/.cmake/api/v1/reply/index-2023-11-08T03-46-37-0002.json
+cmake-build-debug/.cmake/api/v1/reply/target-all_files_of_dir-Debug-8be1180ce61aa84825af.json
+cmake-build-debug/all_files_of_dir
+cmake-build-debug/CMakeFiles/all_files_of_dir.dir/Chapter10/列出目录下所有的文件.cpp.o
+cmake-build-debug/CMakeFiles/normative_path.dir/Chapter10/相对路径获取规范的文件路径.cpp.o
+cmake-build-debug/normative_path

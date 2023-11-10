@@ -47,38 +47,49 @@ static void demo1(const size_t &&samples) {
 
 static void demo2(const size_t &sample) {
     // normal_distribution { 均值，标准差 }: 高斯分布
-    print_distro(normal_distribution{}, sample);
+    print_distro(normal_distribution<double>{0.0, 10.0}, sample);
 }
-
 
 static void demo3(const size_t &samples) {
     cout << "bernoulli_distribution\n";
-    // bernoulli_distribution {}:
+    // bernoulli_distribution {概率}: 决定两个事件不同次数的出现概率
     print_distro(std::bernoulli_distribution{0.75}, samples);
 }
 
 static void demo4(const size_t &samples) {
     cout << "discrete_distribution\n";
-    //
+    // discrete_distribution {权值范围}: 指定不同独立数的出现概率
     print_distro(discrete_distribution<int>{{1, 2, 4, 8}}, samples);
 }
 
 static void demo5(const size_t &samples) {
     initializer_list<int> intervals{0, 5, 10, 30};
     initializer_list<double> weights{0.2, 0.3, 0.5};
+
     cout << "piecewise_constant_distribution\n";
-    // piecewise_constant_distribution {区间，出现的权重}: 控制区间出现的概率
+    // piecewise_constant_distribution {区间，出现的权重}: 控制区间出现的概率，小区间内部值出现概率相同
     print_distro(piecewise_constant_distribution<double>{
             begin(intervals), end(intervals),
             begin(weights)}, samples);
+
+    // piecewise_linear_distribution {区间，权重}: 控制区间出现的概率，小区间范围内也符合这个规律
+    cout << "piecewise_linear_distribution\n";
+    initializer_list<double> weights2{0.5, 0.3, 0.2};
+    print_distro(
+            piecewise_linear_distribution<double>{
+                    begin(intervals), end(intervals),
+                    begin(weights2)}, samples);
 }
+
+
 
 int main() {
     size_t samples = 1000;
 //    demo1(std::move(samples));
 //    demo2(samples);
+//    demo3(samples);
 //    demo4(samples);
+//    demo5(samples);
 
-    demo5(samples);
     return 0;
 }
